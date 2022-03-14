@@ -4,7 +4,6 @@ public class Rupee {
 
     public Rupee(int value) {
         this.value = value;
-
     }
 
 
