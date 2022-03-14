@@ -4,31 +4,50 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class RupeeTest {
     @Test
-    void RupeeObj1NotSameAsRupeeObj2() {
-        Rupee rupee1 = new Rupee(10);
-        Rupee rupee2 = new Rupee(10);
+    void oneTenRupeeNotSameAnotherTenRupee() {
+        Rupee oneTenRupee = new Rupee(10);
+        Rupee anotherTenRupee = new Rupee(10);
 
-        assertNotSame(rupee1, rupee2);
+        assertNotSame(oneTenRupee, anotherTenRupee);
     }
 
     @Test
-    void RupeeObj1ValueEqualsRupeeObj2() {
+    void oneTenRupeeEqualsAnotherTenRupee() {
 
-        Rupee rupee1 = new Rupee(10);
-        Rupee rupee2 = new Rupee(10);
+        Rupee oneTenRupee = new Rupee(10);
+        Rupee anotherTenRupee = new Rupee(10);
 
-        assertEquals(rupee1, rupee2);
+        assertEquals(oneTenRupee, anotherTenRupee);
 
 
     }
 
     @Test
-    void RupeeObj1ValueNotEqualsRupeeObj2() {
+    void oneTenRupeeNotEqualsAnotherTenRupee() {
 
-        Rupee rupee1 = new Rupee(10);
-        Rupee rupee2 = new Rupee(5);
+        Rupee tenRupee = new Rupee(10);
+        Rupee fiveRupee = new Rupee(5);
 
-        assertNotEquals(rupee1, rupee2);
+        assertNotEquals(tenRupee, fiveRupee);
 
+    }
+
+    @Test
+    void tenRupeeIsNotNull() {
+
+        Rupee tenRupee = new Rupee(10);
+
+        assertNotEquals(tenRupee, null);
+
+    }
+
+    @Test
+    public void tenRupeeIsNotSameAsAnotherObject() {
+
+        Rupee tenRupee = new Rupee(10);
+
+        Object anotherObject = new Object();
+
+        assertNotSame(anotherObject, tenRupee);
     }
 }
